@@ -1,3 +1,10 @@
+'''
+    Name         :  Caesar algorithm
+    Author       :  R Gautham Ram
+    Tested on    :  Python 2.7
+    Date created :  14 Sep 17
+    Description  :  Uses caesar's algorithm for encrypting/decrypting of the string
+'''
 
 def caesar_encrypt(a,key):
     str=""

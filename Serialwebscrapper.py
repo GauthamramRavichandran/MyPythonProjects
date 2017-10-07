@@ -1,8 +1,16 @@
+'''
+    Name         :  TV Serials downloader
+    Author       :  R Gautham Ram
+    Tested on    :  Python 2.7
+    Date created :  23 Sep 17
+    Description  :  Opens a webpage for downloading tv serials
+'''
+    
 import webbrowser as wb
 from bs4 import BeautifulSoup as bs
 import urllib
 
-Base_URL=['http://dl2.my98music.com/Data/Serial/','http://dl.funsaber.net/serial/','http://dl.my-film.in/serial/','http://dl.dlfile.pro/2/','http://46.4.238.69/Series/','http://dl3.downloadoo.site/Tvshow/','http://dl2.downloado.site/dl2/TV%20Show/']
+Base_URL=['http://dl2.my98music.com/Data/Serial/','http://dl.funsaber.net/serial/','http://dl.my-film.in/serial/','http://dl.dlfile.pro/2/','http://46.4.238.69/Series/','http://dl3.downloadoo.site/Tvshow/','http://dl2.film2movie.biz/serial/','http://dl2.downloado.site/dl2/TV%20Show/']
 
 def main():
     tv=raw_input('Enter the name of the series(as such):')
@@ -22,7 +30,7 @@ def main():
         if(rcode==404):
             continue
         else:
-            print("Found your series "+tv)
+            print("Found your series -"+tv)
             wb.open_new_tab(URL)
             found=1
             break
