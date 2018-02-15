@@ -1,5 +1,5 @@
 '''
-    Name         :  Finding Stock Price of currency
+    Name         :  Find Stock Price of a currency
     Author       :  R Gautham Ram
     Tested on    :  Python 3.5
     Date created :  14 Sep 17
@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 import csv
 from datetime import datetime
 
-stock='http://www.bloomberg.com/quote/EURUSD:CUR'    #Change the value next to ..quote/{here} whatever you want
+stock='http://www.bloomberg.com/quote/EURUSD:CUR'    #Change the value next to ...quote/{here} whatever stock you want
 page=urlopen(stock)
 soup=BeautifulSoup(page,'html.parser')
 
@@ -26,4 +26,4 @@ print(price)
 #Writes to a file
 with open('stock.csv','a') as csv_file:
     writer=csv.writer(csv_file)
-    writer.writerow([name,price,datetime.now()])
+	writer.writerow([name,price,datetime.now()])

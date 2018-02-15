@@ -1,5 +1,5 @@
 '''
-    Name     :  Finding most repeated letter in a string
+    Name     :  Find most repeated letter in a string
     Author   :  R Gautham Ram
     Tested on:  Python 2.7
     Date created  : 7 Oct 17
@@ -7,6 +7,7 @@
 '''
 
 import string
+
 def mostwanted(text):
     textTmp = text.replace(" ", "").lower()  #Removes white spaces and makes it lowercase
     maxcount = 0
@@ -17,9 +18,9 @@ def mostwanted(text):
              if charcount > maxcount:
                 maxcount = charcount
                 a = item
-             elif charcount==maxcount:
+             elif charcount == maxcount:
                  if item < a :
-                     a=item
+                     a = item
     return a
 
 if __name__=='__main__':

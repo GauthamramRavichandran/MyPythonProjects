@@ -1,7 +1,7 @@
 '''
     Name         :  Caesar algorithm
     Author       :  R Gautham Ram
-    Tested on    :  Python 2.7
+    Tested on    :  Python 3
     Date created :  14 Sep 17
     Description  :  Uses caesar's algorithm for encrypting/decrypting of the string
 '''
@@ -41,12 +41,15 @@ def caesar_decrypt(a,key):
             str+=a[i]
     print("Decrypted:"+str)
 
+def main() :
+    choice=int(input('Press 1 for encrypt or 0 for decrypt\n'))
+    a=input('Enter the code:')
+    key=int(input('Enter the key:'))
 
-choice=int(input('Press 1 for encrypt or 0 for decrypt'))
-a=input('Enter the code:')
-key=int(input('Enter the key:'))
+    if choice:
+    	caesar_encrypt(a,key)
+    else:
+    	caesar_decrypt(a,key)
 
-if choice:
-	caesar_encrypt(a,key)
-else:
-	caesar_decrypt(a,key)
+if __name__ == '__main__':
+    main()
